@@ -1,0 +1,22 @@
+{
+  "name": "task-1-html-css-rwd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "/src/index.html",
+  "scripts": {
+    "scss": "node-sass --watch src/scss -o src/style/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Krystoart/task-1-html-css-rwd.git"
+  },
+  "author": "Kristofers Volkovs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Krystoart/task-1-html-css-rwd/issues"
+  },
+  "homepage": "https://github.com/Krystoart/task-1-html-css-rwd#readme",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
