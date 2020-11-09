@@ -88,14 +88,14 @@ nav {
 
     .fake-pic {
         background-color: $base-dark;
-        flex: 2;
+        flex: 3;
     }
 
     .form {
         @extend .col;
         justify-content: center;
         align-items: center;
-        flex: 1;
+        flex: 2;
 
         label {
             font-size: 0.9rem;
