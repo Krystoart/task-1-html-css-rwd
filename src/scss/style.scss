@@ -121,7 +121,20 @@ nav {
     }
 }
 
+@media (max-width: 480px) {
+    * {
+        font-size: 10px;
+    }
 
+    .main-form {
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+    }
 
+    .fake-pic {
+        margin-bottom: 2rem;
+    }
+}
 
 
