@@ -1,4 +1,10 @@
-@import '../../utils/StyleUtils.scss'
+@import '../../utils/StyleUtils.scss';
 
 
+.game-wrapper {
+    margin-top: 10vh;
+    height: 50vh;
+    width: fit-content;
+}
 
+// background-color: $base-dark;
