@@ -3,6 +3,7 @@ import { Engine } from './GameEngine';
 
 export function GameManager(): ReactElement {
   const [isStarted, setIsStarted] = useState<boolean>(false);
+  const [showPlayAgain, setShowPlayAgain] = useState<boolean>(false);
   const [currentGuess, setCurrentGuess] = useState<number>();
   const [helperText, setHelperText] = useState<string>('Just make a guess!');
 
@@ -23,25 +24,32 @@ export function GameManager(): ReactElement {
             <input
               type="text"
               name="guess"
+              value={currentGuess}
               onChange={(e) => {
                 const re = /^[0-9\b]+$/;
                 if (e.target.value || re.test(e.target.value)) {
                   setCurrentGuess(Number(e.target.value));
+                } else {
+                  setCurrentGuess(undefined);
                 }
               }}
             />
             <button
               type="button"
               onClick={() => {
+                // TODO play again function doesn't fully work
                 if (currentGuess) {
                   const result = Engine.guessNumber(currentGuess);
-                  if (result === 1) {
+                  if (result === 1 && !showPlayAgain) {
                     setHelperText('The guess is too low');
-                  } else if (result === -1) {
+                  } else if (result === -1 && !showPlayAgain) {
                     setHelperText('The guess is too high');
-                  } else {
+                  } else if (result === 0 && !showPlayAgain) {
                     setHelperText('The guess is correct! Good job!');
+                    setShowPlayAgain(true);
+                  } else {
                     Engine.resetGame();
+                    setShowPlayAgain(true);
                   }
                 }
               }}
@@ -63,6 +71,20 @@ export function GameManager(): ReactElement {
             </button>
           </div>
         )}
+      {showPlayAgain && (
+      <div>
+        <button
+          type="button"
+          onClick={() => {
+            Engine.resetGame();
+            Engine.generateNumber();
+            setShowPlayAgain(false);
+            setCurrentGuess(undefined);
+          }}
+        > Play again?
+        </button>
+      </div>
+      )}
     </div>
   );
 }
