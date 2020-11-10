@@ -11,6 +11,10 @@ a:link {
     text-decoration: none;
 }
 
-.bg-color {
+body {
     background-color: $base-background;
+}
+
+.main-wrapper {
+    margin-top: 5rem;
 }

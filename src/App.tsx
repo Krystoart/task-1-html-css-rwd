@@ -6,7 +6,7 @@ import React from 'react';
 
 function App(): React.ReactElement {
   return (
-    <div className="bg-color">
+    <div className="main-wrapper">
       <Header />
       <ReactRouter />
       <Footer />
