@@ -24,19 +24,23 @@ class Engine {
 
   guessNumber = (guess: number): number | undefined => {
     if (this.attemptsLeft > 0 && this.numberToGuess) {
-      if (guess > this.numberToGuess) {
+      if (guess < this.numberToGuess) {
         this.attemptsLeft -= 1;
         return 1;
       }
-      if (guess < this.numberToGuess) {
+      if (guess > this.numberToGuess) {
         this.attemptsLeft -= 1;
         return -1;
       }
 
-      this.attemptsLeft = 0;
       return 0;
     }
     return undefined;
+  };
+
+  resetGame = (): void => {
+    this.numberToGuess = -1;
+    this.attemptsLeft = 0;
   };
 }
 
