@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif; }
+
+.main-wrapper {
+  margin-top: 5rem; }
+
+.row, .main-form {
+  display: flex;
+  flex-direction: row; }
+
+.col, .main-form .form {
+  display: flex;
+  flex-direction: column; }
+
+.wrapper {
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 100%; }
+
+.nav-background-color {
+  background-color: white; }
+
+nav {
+  display: inline-block;
+  position: fixed;
+  top: 0px; }
+  nav .logo {
+    display: inline-block;
+    width: 7rem;
+    height: 3rem;
+    background-color: #141C3A; }
+  nav .button, nav .button-purple {
+    height: 2.5rem;
+    width: 9rem;
+    float: right;
+    text-align: center;
+    line-height: 2.5rem; }
+  nav .button-purple {
+    color: white;
+    background-color: #6401E4; }
+
+#root {
+  background-color: #F1F3FE;
+  height: 100%; }
+
+.small-text {
+  font-size: 0.7rem; }
+
+.input, .main-form .form .text-input, .main-form .form .submit-button {
+  border: 1px solid lightgray;
+  height: 2.5rem; }
+
+.main-form {
+  height: 80vh; }
+  .main-form * {
+    margin-bottom: 0.5rem;
+    border-radius: 0%; }
+  .main-form .fake-pic {
+    background-color: #141C3A;
+    flex: 3; }
+  .main-form .form {
+    justify-content: center;
+    align-items: center;
+    flex: 2; }
+    .main-form .form label {
+      font-size: 0.9rem; }
+    .main-form .form .form-box {
+      width: 20rem; }
+    .main-form .form .text-input {
+      margin: 0.2rem;
+      margin-bottom: 1rem;
+      width: 100%; }
+    .main-form .form .submit-button {
+      width: 100%;
+      color: white;
+      background-color: #6401E4; }
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  height: 7vh;
+  width: 100%;
+  background-color: #141C3A; }
+  footer .fake-pic {
+    display: inline-block;
+    width: 7rem;
+    height: 2rem;
+    background-color: #F1F3FE; }
+
+@media (max-width: 480px) {
+  * {
+    font-size: 10px; }
+  .main-form {
+    display: flex;
+    flex-direction: column;
+    height: 80vh; }
+  .fake-pic {
+    margin-bottom: 2rem; } }
