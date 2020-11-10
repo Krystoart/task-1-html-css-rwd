@@ -1,0 +1,16 @@
+@import '../../utils/StyleUtils.scss';
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    height: 7vh;
+    width: 100%;
+    background-color: $base-dark;
+
+    .fake-pic {
+        display: inline-block;
+        width: 7rem;
+        height: 2rem;
+        background-color: $base-background;
+    }
+}
