@@ -37,7 +37,7 @@ export function GameManager(): ReactElement {
             <button
               type="button"
               onClick={() => {
-                // TODO play again function doesn't fully work
+                // TODO it some components don't update in time - replace with useEffect
                 if (currentGuess) {
                   const result = Engine.guessNumber(currentGuess);
                   if (result === 1 && !showPlayAgain) {
@@ -80,6 +80,7 @@ export function GameManager(): ReactElement {
             Engine.generateNumber();
             setShowPlayAgain(false);
             setCurrentGuess(undefined);
+            setHelperText('Just make a guess!');
           }}
         > Play again?
         </button>
