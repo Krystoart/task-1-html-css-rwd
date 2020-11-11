@@ -1,6 +1,6 @@
-import { Footer } from 'core/root/Footer';
-import { Header } from 'core/root/Header';
-import { ReactRouter } from 'core/root/ReactRouter';
+import { Footer } from 'core/Footer';
+import { Header } from 'core/Header';
+import { ReactRouter } from 'core/ReactRouter';
 import 'App.scss';
 import React from 'react';
 

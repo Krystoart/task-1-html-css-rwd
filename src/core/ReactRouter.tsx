@@ -2,9 +2,9 @@ import React from 'react';
 
 import { Switch, Route } from 'react-router-dom';
 
-import { GameManager } from 'core/game/GameManager';
-import { Home } from 'core/home/Home';
-import { CrudManager } from 'core/crud/CrudManager';
+import { GameManager } from 'game/GameManager';
+import { Home } from 'home/Home';
+import { CrudManager } from 'crud/CrudManager';
 
 export function ReactRouter(): React.ReactElement {
   return (

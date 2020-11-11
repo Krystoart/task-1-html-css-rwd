@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './Header.scss';
-import '../../utils/StyleUtils.scss';
+import '../utils/StyleUtils.scss';
 import { Link } from 'react-router-dom';
 
 export function Header(): React.ReactElement {

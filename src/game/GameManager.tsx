@@ -1,7 +1,7 @@
 import React, { ReactElement, useState } from 'react';
 import { Engine } from './GameEngine';
 
-import '../../utils/StyleUtils.scss';
+import '../utils/StyleUtils.scss';
 import './GameManager.scss';
 
 export function GameManager(): ReactElement {
