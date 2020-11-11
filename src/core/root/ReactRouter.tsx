@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import { GameManager } from 'core/game/GameManager';
 import { Home } from 'core/home/Home';
+import { CrudManager } from 'core/crud/CrudManager';
 
 export function ReactRouter(): React.ReactElement {
   return (
@@ -13,6 +14,9 @@ export function ReactRouter(): React.ReactElement {
       </Route>
       <Route exact path="/game">
         <GameManager />
+      </Route>
+      <Route exact path="/crud">
+        <CrudManager />
       </Route>
     </Switch>
   );

@@ -17,8 +17,15 @@ export function Header(): React.ReactElement {
           </Link>
         </div>
         <div className="button">
+          <Link to={{ pathname: '/crud' }}>
+            <p>
+              Crud
+            </p>
+          </Link>
+        </div>
+        <div className="button">
           <Link to={{ pathname: '/' }}>
-            <p className="">
+            <p>
               Home
             </p>
           </Link>
