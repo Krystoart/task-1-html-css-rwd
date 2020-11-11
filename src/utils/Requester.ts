@@ -45,9 +45,9 @@ async function post<T, B>(url: string, params: B): Promise<T> {
 }
 
 class Requester {
-  getInstallations = (
-    params: temp,
-  ): Promise<temp> => get(urls['temp-temp'], params);
+  // getInstallations = (
+  //   params: temp,
+  // ): Promise<temp> => get(urls['temp-temp'], params);
 }
 
 const requester = new Requester();
