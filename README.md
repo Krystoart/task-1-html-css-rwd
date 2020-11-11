@@ -1,6 +1,6 @@
 # Task 2 in course: Web Technologies
 
-**Task:** create a basic webpage layout using HTML and CSS
+**Task:** create a basic webpage using react
 
 
 ## Project setup
