@@ -1,4 +1,8 @@
-import express from 'express';
+/* eslint-disable @typescript-eslint/no-var-requires */
+// import express from 'express';
+
+// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+const express = require('express');
 
 const app = express();
 

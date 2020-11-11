@@ -11,4 +11,6 @@ Install all needed npm dependencies:
 ## Development
 
 To start the project:
->npm run dev
+>npm run start
+
+>npx nodemon src/api/crud.ts
