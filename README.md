@@ -11,4 +11,4 @@ Install all needed npm dependencies:
 ## Development
 
 To start the project:
->npm start
+>npm run dev
