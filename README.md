@@ -1,6 +1,6 @@
 # Task 3 in course: Web Technologies
 
-**Task:** create a webpage with basic REST functionality using Node.js and Express
+**Task:** create an api with basic REST functionality using Node.js and Express
 
 
 ## Project setup
@@ -10,7 +10,5 @@ Install all needed npm dependencies:
 
 ## Development
 
-To start the project:
->npm run start
-
+To start the server:
 >npx nodemon src/api/crud.ts

@@ -1,8 +1,4 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-// import express from 'express';
-
-// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-const express = require('express');
+import express from 'express';
 
 const app = express();
 
@@ -10,7 +6,11 @@ const port = 3000;
 
 // app.get('/api/')
 
-app.get('/api', (req, res) => {
+app.get('/api/data', (req, res) => {
+  res.send('Hello World!');
+});
+
+app.get('/api/data-all', (req, res) => {
   res.send('Hello World!');
 });
 
