@@ -1,6 +1,6 @@
-# Task 2 in course: Web Technologies
+# Task 3 in course: Web Technologies
 
-**Task:** create a basic webpage layout using HTML and CSS
+**Task:** create a webpage with basic REST functionality using Node.js and Express
 
 
 ## Project setup
