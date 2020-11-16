@@ -5,120 +5,138 @@ $accent-yellow: #ffc73f;
 $accent-purple: #6401e4;
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
 
 .main-wrapper {
-    margin-top: 5rem;
+  margin-top: 5rem;
 }
 
 .row {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .col {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .wrapper {
-    padding: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    width: 100%;
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 100%;
 }
 
 .nav-background-color {
-    background-color: white;
+  background-color: white;
 }
 
 nav {
-    position: fixed;
-    top: 0px;
+  position: fixed;
+  top: 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-    .logo {
-        width: 7rem;
-        height: 3rem;
-        background-color: $base-dark;
-    }
+  .logo {
+    width: 7rem;
+    height: 3rem;
+    background-color: $base-dark;
+  }
 
-    .button {
-        height: 2.5rem;
-        width: 9rem;
-        float: right;
-        text-align: center;
-        line-height: 2.5rem;
-    }
+  .button {
+    height: 2.5rem;
+    width: 9rem;
+    float: right;
+    text-align: center;
+    line-height: 2.5rem;
+  }
 
-    .button-purple {
-        @extend .button;
-        color: white;
-        background-color: $accent-purple;
-    }
+  .button-purple {
+    @extend .button;
+    color: white;
+    background-color: $accent-purple;
+  }
 }
 
 #root {
-    background-color: $base-background;
+  background-color: $base-background;
   height: 100%;
 }
 
 .small-text {
-    font-size: 0.7rem;
+  font-size: 0.7rem;
 }
 
 .input {
-    border: 1px solid lightgray;
-    height: 2.5rem;
+  border: 1px solid lightgray;
+  height: 2.5rem;
 }
 
 .main-form {
-    @extend .row;
-    height: 80vh;
+  @extend .row;
+  height: 80vh;
 
-    .fake-pic {
-        background-color: $base-dark;
-        flex: 3;
+  .fake-pic {
+    background-color: $base-dark;
+    flex: 3;
+  }
+
+  .form {
+    @extend .col;
+    justify-content: center;
+    align-items: center;
+    flex: 2;
+
+    label {
+      font-size: 0.9rem;
     }
 
-    .form {
-        @extend .col;
-        justify-content: center;
-        align-items: center;
-        flex: 2;
-
-        label {
-            font-size: 0.9rem;
-        }
-
-        .form-box {
-            width: 20rem;
+    .form-box {
+      width: 20rem;
 
       * {
         margin-bottom: 0.5rem;
         border-radius: 0%;
-        }
+      }
     }
 
-        .text-input {
-            @extend .input;
-            margin: 0.2rem;
-            margin-bottom: 1rem;
-            width: 100%;
-        }
+    .form-icons {
+      justify-content: space-between;
 
-        .submit-button {
-            @extend .input;
-            width: 100%;
-            color: white;
-            background-color: $accent-purple;
-        }
+      * {
+        margin: 0;
+      }
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4rem;
+        height: 2.5rem;
+        background-color: white;
+        border: 0.15rem solid lightgray;
+      }
+    }
+
+    .text-input {
+      @extend .input;
+      margin: 0.2rem;
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+
+    .submit-button {
+      @extend .input;
+      width: 100%;
+      color: white;
+      background-color: $accent-purple;
+    }
 
     @media (max-width: 480px) {
       .form-box {
@@ -126,36 +144,36 @@ nav {
         margin: 0 2rem 0 2rem;
       }
     }
-    }
+  }
 }
 
 footer {
-    position: absolute;
-    bottom: 0px;
-    height: 7vh;
-    width: 100%;
-    background-color: $base-dark;
+  position: absolute;
+  bottom: 0px;
+  height: 7vh;
+  width: 100%;
+  background-color: $base-dark;
 
-    .fake-pic {
-        display: inline-block;
-        width: 7rem;
-        height: 2rem;
-        background-color: $base-background;
-    }
+  .fake-pic {
+    display: inline-block;
+    width: 7rem;
+    height: 2rem;
+    background-color: $base-background;
+  }
 }
 
 @media (max-width: 480px) {
-    * {
-        font-size: 10px;
-    }
+  * {
+    font-size: 10px;
+  }
 
-    .main-form {
-        display: flex;
-        flex-direction: column;
-        height: 80vh;
-    }
+  .main-form {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+  }
 
-    .fake-pic {
-        margin-bottom: 2rem;
-    }
+  .fake-pic {
+    margin-bottom: 2rem;
+  }
 }
