@@ -119,6 +119,13 @@ nav {
             color: white;
             background-color: $accent-purple;
         }
+
+    @media (max-width: 480px) {
+      .form-box {
+        width: auto;
+        margin: 0 2rem 0 2rem;
+      }
+    }
     }
 }
 
