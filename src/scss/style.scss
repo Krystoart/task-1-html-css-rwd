@@ -170,6 +170,41 @@ nav {
   }
 }
 
+.sectionWrap {
+  padding: 0 5rem 5rem 5rem;
+}
+
+.greenSection {
+  @extend .sectionWrap;
+
+  .pictureAndText {
+    height: 70vh;
+
+    .someText {
+      flex: 1;
+    }
+
+    .greenBlob {
+      background-color: $accent-lime;
+      flex: 3;
+    }
+  }
+}
+
+.numberingSection {
+  @extend .sectionWrap;
+}
+
+.darkPurpleSection {
+  padding: 0 1.5rem 5rem 1.5rem;
+}
+
+.lightPurpleSection {
+  height: 60vh;
+  align-content: center;
+  justify-content: center;
+}
+
 footer {
   height: 7vh;
   width: 100%;
