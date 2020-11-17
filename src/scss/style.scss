@@ -99,6 +99,7 @@ nav {
 .main-form {
   @extend .row;
   height: 80vh;
+  margin-bottom: 4rem;
 
   .fake-pic {
     background-color: $base-dark;
@@ -172,8 +173,6 @@ nav {
 }
 
 footer {
-  position: absolute;
-  bottom: 0px;
   height: 7vh;
   width: 100%;
   background-color: $base-dark;
@@ -187,13 +186,13 @@ footer {
 }
 
 @media (max-width: 480px) {
-  * {
-    font-size: 10px;
-  }
-
   .main-form {
     display: flex;
     flex-direction: column;
-    height: 80vh;
+    height: auto;
+  }
+
+  footer {
+    height: auto;
   }
 }
