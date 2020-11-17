@@ -62,6 +62,24 @@ nav {
     color: white;
     background-color: $accent-purple;
   }
+
+  @media (max-width: 480px) {
+    * {
+      font-weight: bolder;
+      font-size: 0.5rem;
+    }
+
+    .button {
+      width: 22vw;
+      height: 6vh;
+      line-height: 6vh;
+    }
+
+    .logo {
+      width: 30vw;
+      height: 6vh;
+    }
+  }
 }
 
 #root {
@@ -141,8 +159,14 @@ nav {
     @media (max-width: 480px) {
       .form-box {
         width: auto;
-        margin: 4rem 2rem 0 2rem;
+        margin: 2rem 2rem 1rem 2rem;
       }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .fake-height {
+      height: 30vh;
     }
   }
 }
