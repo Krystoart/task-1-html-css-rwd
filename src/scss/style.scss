@@ -97,7 +97,6 @@ nav {
 }
 
 .main-form {
-  @extend .row;
   height: 80vh;
   margin-bottom: 4rem;
 
@@ -107,7 +106,6 @@ nav {
   }
 
   .form {
-    @extend .col;
     justify-content: center;
     align-items: center;
     flex: 2;
