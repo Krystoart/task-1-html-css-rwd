@@ -1,32 +1,51 @@
-@import './../../utils/StyleUtils.scss';
+@import "./../../utils/StyleUtils.scss";
 
 .nav-background-color {
-    background-color: white;
+  background-color: white;
 }
 
 nav {
-    position: fixed;
-    top: 0px;
-    display: flex;
-    justify-content: space-between;
+  position: fixed;
+  top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    .logo {
-        width: 7rem;
-        height: 3rem;
-        background-color: $base-dark;
+  .logo {
+    width: 7rem;
+    height: 3rem;
+    background-color: $base-dark;
+  }
+
+  .button {
+    height: 2.5rem;
+    width: 9rem;
+    float: right;
+    text-align: center;
+    line-height: 2.5rem;
+    font-weight: 900;
+  }
+
+  .button-purple {
+    @extend .button;
+    color: white;
+    background-color: $accent-purple;
+  }
+
+  @media (max-width: 480px) {
+    * {
+      font-size: 0.5rem;
     }
 
     .button {
-        height: 2.5rem;
-        width: 9rem;
-        float: right;
-        text-align: center;
-        line-height: 2.5rem;
+      width: 22vw;
+      height: 4vh;
+      line-height: 4vh;
     }
 
-    .button-purple {
-        @extend .button;
-        color: white;
-        background-color: $accent-purple;
+    .logo {
+      width: 30vw;
+      height: 4vh;
     }
+  }
 }
