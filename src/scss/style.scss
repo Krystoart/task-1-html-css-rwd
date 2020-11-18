@@ -456,7 +456,8 @@ nav {
   color: $accent-lime;
 }
 
-footer {
+.footer-row {
+  @extend .row;
   height: 7vh;
   width: 100%;
   background-color: $base-dark;
