@@ -319,6 +319,26 @@ nav {
     @extend .box;
     background-color: $base-dark;
   }
+
+  @media (max-width: 768px) {
+    .count-row {
+      flex-direction: column;
+      padding-bottom: 7vh;
+    }
+
+    .circle-num {
+      padding-bottom: 5vh;
+    }
+
+    .text-box {
+      text-align: center;
+    }
+
+    .color-box {
+      padding-bottom: 5vh;
+      justify-self: end;
+    }
+}
 }
 
 .dark-purple-section {
