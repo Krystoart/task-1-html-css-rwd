@@ -4,8 +4,14 @@ const app = express();
 
 const port = 3000;
 
-// app.get('/api/')
+let database: Array<string> = [];
 
+for (let i = 0; i < 10; i += 1) {
+  database.push(
+    Math.random().toString(36).substring(2, 15)
+      + Math.random().toString(36).substring(2, 15),
+  );
+}
 
 console.log('\n\nEndpoint access: \n'
 + 'To say hello: /api/hello\n'
