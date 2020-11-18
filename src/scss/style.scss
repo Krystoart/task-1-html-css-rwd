@@ -294,17 +294,55 @@ nav {
     background-color: $base-dark;
   }
 }
+
 .dark-purple-section {
+  padding-bottom: 3rem;
+  background-color: $base-dark;
+  align-items: center;
+
+  * {
+    color: white;
     }
+
+  .big-text {
+    align-items: center;
+    padding: 8rem 0 8rem 0;
+
+    p {
+      font-size: 2rem;
+      font-weight: 900;
   }
 }
 
-.numberingSection {
-  @extend .sectionWrap;
-}
+  .some-item {
+    padding: 2rem;
 
-.darkPurpleSection {
-  padding: 0 1.5rem 5rem 1.5rem;
+    .title-text {
+      text-align: center;
+      padding-bottom: 1rem;
+
+      p {
+        font-size: 1.5rem;
+        font-weight: 900;
+}
+    }
+
+    .list-group {
+      padding: 1rem;
+
+      .list-item {
+        padding-right: 3rem;
+
+        li {
+          color: $accent-lime;
+
+          p {
+            color: white;
+}
+        }
+      }
+    }
+  }
 }
 
 .light-purple-section {
