@@ -241,8 +241,8 @@ nav {
   .color-box {
     height: 10rem;
     width: 13rem;
-      flex: 1;
-    }
+    flex: 1;
+  }
 
   .count-row {
     align-items: center;
@@ -302,7 +302,7 @@ nav {
 
   * {
     color: white;
-    }
+  }
 
   .big-text {
     align-items: center;
@@ -311,8 +311,8 @@ nav {
     p {
       font-size: 2rem;
       font-weight: 900;
+    }
   }
-}
 
   .some-item {
     padding: 2rem;
@@ -324,7 +324,7 @@ nav {
       p {
         font-size: 1.5rem;
         font-weight: 900;
-}
+      }
     }
 
     .list-group {
@@ -338,7 +338,7 @@ nav {
 
           p {
             color: white;
-}
+          }
         }
       }
     }
@@ -365,7 +365,7 @@ nav {
       font-weight: 900;
       padding-bottom: 2rem;
     }
-}
+  }
 
   .yellow-button {
     width: 17rem;
@@ -384,12 +384,26 @@ footer {
   height: 7vh;
   width: 100%;
   background-color: $base-dark;
+  justify-content: space-between;
+  align-items: center;
+
+  * {
+    color: lightgray;
+  }
 
   .fake-pic {
     display: inline-block;
     width: 7rem;
     height: 2rem;
-    background-color: $base-background;
+    background-color: lightgray;
+  }
+
+  p {
+    padding: 0 1rem 0 1rem;
+  }
+
+  i {
+    padding: 0 0.5rem 0 0.5rem;
   }
 }
 
