@@ -2,6 +2,12 @@
 
 **Task:** create a basic webpage using react
 
+## Tehnologies used:
+
+- This project was created on Ubuntu 20.4
+- React
+- Typescript
+- Sass
 
 ## Project setup
 
