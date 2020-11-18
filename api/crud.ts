@@ -34,8 +34,26 @@ app.get('/api/data-all', (req, res) => {
 
 });
 
-app.post('/api/data/{:id}', (req, res) => {
-  // res.send("Hello World!");
+interface RequestData {
+  data: Array<string>;
+}
+
+app.post('/api/data-create', (req, res) => {
+  /*
+    Request params:
+    ---------------------
+    JSON object:
+      {
+        data: Array<string>;
+      }
+  */
+
+  const { data } = req.body as RequestData;
+
+  data.map((el) => database.push(el));
+  res.send('Success');
+});
+
 });
 
 // app.get("/api", (req, res) => {
