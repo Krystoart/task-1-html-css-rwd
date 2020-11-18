@@ -262,9 +262,12 @@ nav {
   padding-bottom: 2rem;
 
   .color-box {
+    flex: 1;
+  }
+
+  .box {
     height: 10rem;
     width: 13rem;
-    flex: 1;
   }
 
   .count-row {
@@ -303,17 +306,17 @@ nav {
   }
 
   .yellow-color-box {
-    @extend .color-box;
+    @extend .box;
     background-color: $accent-yellow;
   }
 
   .light-purple-color-box {
-    @extend .color-box;
+    @extend .box;
     background-color: $accent-purple;
   }
 
   .dark-purple-color-box {
-    @extend .color-box;
+    @extend .box;
     background-color: $base-dark;
   }
 }
