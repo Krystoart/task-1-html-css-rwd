@@ -1,31 +1,31 @@
-$base-background: #F1F3FE;
-$base-dark: #141C3A;
-$accent-lime: #6DF0C2;
-$accent-yellow: #FFC73F;
-$accent-purple: #6401E4;
+$base-background: #f1f3fe;
+$base-dark: #141c3a;
+$accent-lime: #6df0c2;
+$accent-yellow: #ffc73f;
+$accent-purple: #6401e4;
 
 .row {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .col {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .wrapper {
-    padding: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    width: 100%;
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 100%;
 }
 
 .text-white {
-    color: white;
+  color: white;
 }
 
 .align-center {
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 }
