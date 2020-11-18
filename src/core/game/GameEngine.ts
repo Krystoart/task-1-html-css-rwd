@@ -28,13 +28,19 @@ class Engine {
   // 0 = user guessed the number
   // 2 = out of guesses
   guessNumber = (guess: number): number | undefined => {
-    if (this.attemptsLeft > 0 && this.numberToGuess) {
+    if (this.attemptsLeft > 0) {
       if (guess < this.numberToGuess) {
         this.attemptsLeft -= 1;
+        if (this.attemptsLeft === 0) {
+          return 2;
+        }
         return 1;
       }
       if (guess > this.numberToGuess) {
         this.attemptsLeft -= 1;
+        if (this.attemptsLeft === 0) {
+          return 2;
+        }
         return -1;
       }
 
