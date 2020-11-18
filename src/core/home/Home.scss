@@ -4,11 +4,6 @@
   font-size: 0.7rem;
 }
 
-.input {
-  border: 1px solid lightgray;
-  height: 2.5rem;
-}
-
 .main-form {
   height: 80vh;
   margin-bottom: 4rem;
@@ -58,13 +53,6 @@
           width: 15vw;
         }
       }
-    }
-
-    .text-input {
-      @extend .input;
-      margin: 0.2rem;
-      margin-bottom: 1rem;
-      width: 100%;
     }
 
     .submit-button {

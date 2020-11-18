@@ -38,3 +38,15 @@ $accent-purple: #6401e4;
   border: none;
   padding: 1rem;
 }
+
+.input {
+  border: 1px solid lightgray;
+  height: 2.5rem;
+}
+
+.text-input {
+  @extend .input;
+  margin: 0.2rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
