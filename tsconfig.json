@@ -22,14 +22,14 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react",
-    "baseUrl": "src",
+    "baseUrl": "api",
     "outDir": "./dist/",
   },
   "exclude": [
     "node_modules"
   ],
   "include": [
-    "src"
+    "api"
   ],
   "typeRoots": [
     "../node_modules/@types",
