@@ -15,6 +15,33 @@
         width: 42rem;
         padding-bottom: 5rem;
     }
-}
 
-// background-color: $base-dark;
+    .game-interface {
+        align-items: center;
+        padding-bottom: 1rem;
+
+        .guess-box {
+            align-items: center;
+            padding-bottom: 1rem;
+
+            .guess-label {
+                padding-right: 2rem;
+                flex: 1;
+            }
+
+            .text-input {
+                margin: 0;
+                flex: 1;
+            }
+        }
+
+        .yellow-button {
+            width: 20rem;
+            margin-bottom: 2rem;
+        }
+
+        .helper-text {
+            padding-bottom: 0.5rem;
+        }
+    }
+}
