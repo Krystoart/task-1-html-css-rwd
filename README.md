@@ -2,6 +2,11 @@
 
 **Task:** create a basic webpage layout using HTML and CSS
 
+## Tehnologies used:
+
+- This project was created on Ubuntu 20.4
+- Typescript
+- Sass
 
 ## Project setup
 
