@@ -32,6 +32,8 @@ app.get('/api/data-all', (req, res) => {
   res.send(database);
 });
 
+app.get('/api/data-get/:id', (req, res) => {
+  res.send(database[database.findIndex((val, key) => key === Number(req.params.id))]);
 });
 
 interface RequestData {
