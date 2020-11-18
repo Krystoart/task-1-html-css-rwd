@@ -7,7 +7,8 @@ import './GameManager.scss';
 export function GameManager(): ReactElement {
   const [isStarted, setIsStarted] = useState<boolean>(false);
   const [showPlayAgain, setShowPlayAgain] = useState<boolean>(false);
-  const [currentGuess, setCurrentGuess] = useState<number>();
+  const [currentGuess, setCurrentGuess] = useState<string>('');
+  const [attemptsLeft, setAttemptsLeft] = useState<number>();
   const [helperText, setHelperText] = useState<string>('Just make a guess!');
 
   return (
@@ -31,36 +32,50 @@ export function GameManager(): ReactElement {
                 value={currentGuess}
                 onChange={(e) => {
                   const re = /^[0-9\b]+$/;
-                  if (e.target.value || re.test(e.target.value)) {
-                    setCurrentGuess(Number(e.target.value));
+                  if (e.target.value && re.test(e.target.value)) {
+                    setCurrentGuess(e.target.value);
+                  } else if (!e.target.value) {
+                    setCurrentGuess('');
                   } else {
-                    setCurrentGuess(undefined);
+                    setCurrentGuess(currentGuess);
                   }
                 }}
               />
               <button
                 type="button"
                 onClick={() => {
-                // TODO it some components don't update in time - replace with useEffect
                   if (currentGuess) {
-                    const result = Engine.guessNumber(currentGuess);
-                    if (result === 1 && !showPlayAgain) {
-                      setHelperText('The guess is too low');
-                    } else if (result === -1 && !showPlayAgain) {
-                      setHelperText('The guess is too high');
-                    } else if (result === 0 && !showPlayAgain) {
-                      setHelperText('The guess is correct! Good job!');
-                      setShowPlayAgain(true);
+                    const result = Engine.guessNumber(Number(currentGuess));
+                    console.log(result);
+
+                    if (result || result === 0) {
+                      if (result === 2) {
+                        setHelperText('You lost, too bad :D');
+                        setShowPlayAgain(true);
+                        setAttemptsLeft(Engine.attemptsLeft);
+                        Engine.resetGame();
+                      } else {
+                        if (result === 1) {
+                          setHelperText('The guess is too low');
+                        } else if (result === -1) {
+                          setHelperText('The guess is too high');
+                        } else if (result === 0) {
+                          setHelperText('The guess is correct! Good job!');
+                          setShowPlayAgain(true);
+                        }
+                        setAttemptsLeft(Engine.attemptsLeft);
+                      }
                     } else {
-                      Engine.resetGame();
+                      setHelperText('Some error occured');
                       setShowPlayAgain(true);
+                      Engine.resetGame();
                     }
                   }
                 }}
               > Guess!
               </button>
               <p>{ helperText }</p>
-              <p>Attempts left: <span>{Engine.attemptsLeft}</span></p>
+              <p>Attempts left: <span>{attemptsLeft}</span></p>
             </div>
           )
           : (
@@ -69,6 +84,7 @@ export function GameManager(): ReactElement {
                 type="button"
                 onClick={() => {
                   Engine.generateNumber();
+                  setAttemptsLeft(Engine.attemptsLeft);
                   setIsStarted(true);
                 }}
               > Start game!
@@ -80,11 +96,11 @@ export function GameManager(): ReactElement {
           <button
             type="button"
             onClick={() => {
-              Engine.resetGame();
               Engine.generateNumber();
               setShowPlayAgain(false);
-              setCurrentGuess(undefined);
+              setCurrentGuess('');
               setHelperText('Just make a guess!');
+              setAttemptsLeft(Engine.attemptsLeft);
             }}
           > Play again?
           </button>
