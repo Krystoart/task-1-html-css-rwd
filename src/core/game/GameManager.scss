@@ -1,47 +1,53 @@
 @use '../../utils/StyleUtils.scss' as *;
 
-
 .game-wrapper {
-    margin-top: 10vh;
-    height: 75vh;
-    width: fit-content;
+  margin-top: 10vh;
+  height: 75vh;
+  width: fit-content;
+  text-align: center;
+
+  .title-text {
+    padding-bottom: 3rem;
+  }
+
+  .tutorial-text {
+    width: 42rem;
+    padding-bottom: 5rem;
     text-align: center;
+  }
 
-    .title-text {
-        padding-bottom: 3rem;
+  .game-interface {
+    align-items: center;
+    padding-bottom: 1rem;
+
+    .guess-box {
+      align-items: center;
+      padding-bottom: 1rem;
+
+      .guess-label {
+        padding-right: 2rem;
+        flex: 1;
+      }
+
+      .text-input {
+        margin: 0;
+        flex: 1;
+      }
     }
 
+    .yellow-button {
+      width: 20rem;
+      margin-bottom: 2rem;
+    }
+
+    .helper-text {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
     .tutorial-text {
-        width: 42rem;
-        padding-bottom: 5rem;
+      width: auto;
     }
-
-    .game-interface {
-        align-items: center;
-        padding-bottom: 1rem;
-
-        .guess-box {
-            align-items: center;
-            padding-bottom: 1rem;
-
-            .guess-label {
-                padding-right: 2rem;
-                flex: 1;
-            }
-
-            .text-input {
-                margin: 0;
-                flex: 1;
-            }
-        }
-
-        .yellow-button {
-            width: 20rem;
-            margin-bottom: 2rem;
-        }
-
-        .helper-text {
-            padding-bottom: 0.5rem;
-        }
-    }
+  }
 }
