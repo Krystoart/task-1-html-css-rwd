@@ -11,4 +11,4 @@ Install all needed npm dependencies:
 ## Development
 
 To start the server:
->npx nodemon src/api/crud.ts
+>npx nodemon api/crud.ts
