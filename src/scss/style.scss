@@ -481,6 +481,18 @@ nav {
   i {
     padding: 0 0.5rem 0 0.5rem;
   }
+
+  @media (max-width: 768px) {
+    .middle-text {
+      flex-direction: column;
+      text-align: center;
+      padding-top: 2.5vh;
+
+      p {
+        padding-bottom: 1vh;
+      }
+    }
+}
 }
 
 @media (max-width: 480px) {
