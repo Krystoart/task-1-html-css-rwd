@@ -46,7 +46,6 @@ export function GameManager(): ReactElement {
                 onClick={() => {
                   if (currentGuess) {
                     const result = Engine.guessNumber(Number(currentGuess));
-                    console.log(result);
 
                     if (result || result === 0) {
                       if (result === 2) {
