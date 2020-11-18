@@ -14,15 +14,15 @@ export function GameManager(): ReactElement {
   return (
     <div className="row align-center">
       <div className="game-wrapper">
+        <h2 className="title-text">Guessing game</h2>
+        <div className="tutorial-text">
         <p>
-          Guessing game
+            The computer will generate a random number between 1 and 100 and
+            you, the user, has to guess the number! You have 10 tries to guess
+            the number, good luck!
         </p>
-        <p>
-          The computer will generate a random number between 1 and 100 and you,
-          the user, has to guess the number! You have 10 tries to guess the number!
-        </p>
-        {isStarted
-          ? (
+        </div>
+        {isStarted ? (
             <div>
               {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
               <label htmlFor="guess">Write your guess here: </label>
@@ -43,6 +43,7 @@ export function GameManager(): ReactElement {
               />
               <button
                 type="button"
+              className="yellow-button"
                 onClick={() => {
                   if (currentGuess) {
                     const result = Engine.guessNumber(Number(currentGuess));
@@ -71,22 +72,28 @@ export function GameManager(): ReactElement {
                     }
                   }
                 }}
-              > Guess!
+            >
+              {' '}
+              Guess!
               </button>
-              <p>{ helperText }</p>
-              <p>Attempts left: <span>{attemptsLeft}</span></p>
+            <p>{helperText}</p>
+            <p>
+              Attempts left: <span>{attemptsLeft}</span>
+            </p>
             </div>
-          )
-          : (
+        ) : (
             <div>
               <button
                 type="button"
+              className="yellow-button"
                 onClick={() => {
                   Engine.generateNumber();
                   setAttemptsLeft(Engine.attemptsLeft);
                   setIsStarted(true);
                 }}
-              > Start game!
+            >
+              {' '}
+              Start game!
               </button>
             </div>
           )}
@@ -94,6 +101,7 @@ export function GameManager(): ReactElement {
         <div>
           <button
             type="button"
+              className="yellow-button"
             onClick={() => {
               Engine.generateNumber();
               setShowPlayAgain(false);
@@ -101,7 +109,9 @@ export function GameManager(): ReactElement {
               setHelperText('Just make a guess!');
               setAttemptsLeft(Engine.attemptsLeft);
             }}
-          > Play again?
+            >
+              {' '}
+              Play again?
           </button>
         </div>
         )}
