@@ -24,6 +24,8 @@ console.log('\n\nEndpoint access: \n'
 + 'Delete element POST: /api/data-delete\n'
 + 'Update element POST: /api/data-update\n\n');
 
+app.get('/api/hello', (req, res) => {
+  res.send('Oh hi there :D');
 });
 
 app.get('/api/data-all', (req, res) => {
