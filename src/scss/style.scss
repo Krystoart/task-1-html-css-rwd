@@ -170,23 +170,23 @@ nav {
   }
 }
 
-.sectionWrap {
+.section-wrap {
   padding: 0 5rem 5rem 5rem;
 }
 
-.greenSection {
-  @extend .sectionWrap;
+.green-section {
+  @extend .section-wrap;
 
-  .pictureAndText {
-    height: 70vh;
+  .picture-and-text {
+    height: 50vh;
 
-    .someText {
+    .some-text {
+    .green-blob {
+.numbering-section {
       flex: 1;
     }
 
-    .greenBlob {
-      background-color: $accent-lime;
-      flex: 3;
+.dark-purple-section {
     }
   }
 }
@@ -199,9 +199,7 @@ nav {
   padding: 0 1.5rem 5rem 1.5rem;
 }
 
-.lightPurpleSection {
-  height: 60vh;
-  align-content: center;
+.light-purple-section {
   justify-content: center;
 }
 
