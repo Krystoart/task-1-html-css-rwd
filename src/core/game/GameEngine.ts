@@ -22,6 +22,11 @@ class Engine {
     this.attemptsLeft = this.maxAttempts;
   };
 
+  // Return value explenation:
+  // 1 = number to guess is bigger
+  // -1 = number to guess is smaller
+  // 0 = user guessed the number
+  // 2 = out of guesses
   guessNumber = (guess: number): number | undefined => {
     if (this.attemptsLeft > 0 && this.numberToGuess) {
       if (guess < this.numberToGuess) {
