@@ -54,6 +54,24 @@ app.post('/api/data-create', (req, res) => {
   res.send('Success');
 });
 
+interface RequestDelete {
+  id: number
+}
+
+app.delete('/api/data-delete', (req, res) => {
+  /*
+    Request params:
+    ---------------------
+    JSON object:
+      {
+        id: number;
+      }
+  */
+
+  database = database.filter(
+    (val, key) => key !== (req.body as RequestDelete).id,
+  );
+  res.send('Success');
 });
 
 // app.get("/api", (req, res) => {
