@@ -1,4 +1,4 @@
-@import "./../../utils/StyleUtils.scss";
+@use './../../utils/StyleUtils.scss' as *;
 
 .nav-background-color {
   background-color: white;
