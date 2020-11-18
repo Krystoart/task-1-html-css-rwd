@@ -224,6 +224,23 @@ nav {
       flex: 5;
     }
   }
+
+  @media (max-width: 768px) {
+    .picture-and-text {
+      flex-direction: column;
+      height: auto;
+}
+
+    .text-box {
+      width: 60vw;
+      text-align: center;
+      padding-bottom: 3vh;
+    }
+
+    .fake-height {
+      height: 35vh;
+    }
+  }
 }
 
 .big-text-box {
