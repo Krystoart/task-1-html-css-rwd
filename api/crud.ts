@@ -29,7 +29,9 @@ app.get('/api/hello', (req, res) => {
 });
 
 app.get('/api/data-all', (req, res) => {
-  res.send('Hello World!');
+  res.send(database);
+});
+
 });
 
 app.post('/api/data/{:id}', (req, res) => {
