@@ -194,7 +194,46 @@ nav {
     height: 50vh;
 
     .some-text {
+      flex: 2;
+      align-items: center;
+
+      .text-box {
+        width: 15rem;
+        padding-top: 3rem;
+
+        .title-text {
+          font-size: 2rem;
+          font-weight: 900;
+          margin-bottom: 2rem;
+        }
+
+        .small-text-margin {
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+
     .green-blob {
+      background-color: $accent-lime;
+      flex: 5;
+    }
+  }
+}
+
+.big-text-box {
+  padding-bottom: 5rem;
+  justify-content: center;
+
+  .box-align {
+    align-items: center;
+
+    p {
+      font-size: 2.5rem;
+      font-weight: 900;
+    }
+  }
+}
+
 .numbering-section {
       flex: 1;
     }
