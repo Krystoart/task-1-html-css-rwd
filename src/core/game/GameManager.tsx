@@ -23,62 +23,67 @@ export function GameManager(): ReactElement {
           </p>
         </div>
         {isStarted ? (
-          <div>
-            {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-            <label htmlFor="guess">Write your guess here: </label>
-            <input
-              type="text"
-              name="guess"
-              value={currentGuess}
-              onChange={(e) => {
-                const re = /^[0-9\b]+$/;
-                if (e.target.value && re.test(e.target.value)) {
-                  setCurrentGuess(e.target.value);
-                } else if (!e.target.value) {
-                  setCurrentGuess('');
-                } else {
-                  setCurrentGuess(currentGuess);
-                }
-              }}
-            />
-            <button
-              type="button"
-              className="yellow-button"
-              onClick={() => {
-                if (currentGuess) {
-                  const result = Engine.guessNumber(Number(currentGuess));
-
-                  if (result || result === 0) {
-                    if (result === 2) {
-                      setHelperText('You lost, too bad :D');
-                      setShowPlayAgain(true);
-                      setAttemptsLeft(Engine.attemptsLeft);
-                      Engine.resetGame();
-                    } else {
-                      if (result === 1) {
-                        setHelperText('The guess is too low');
-                      } else if (result === -1) {
-                        setHelperText('The guess is too high');
-                      } else if (result === 0) {
-                        setHelperText('The guess is correct! Good job!');
-                        setShowPlayAgain(true);
-                      }
-                      setAttemptsLeft(Engine.attemptsLeft);
-                    }
+          <div className="col game-interface">
+            <div className="row guess-box">
+              {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+              <label className="guess-label" htmlFor="guess">Write your guess here: </label>
+              <input
+                type="text"
+                className="text-input"
+                name="guess"
+                value={currentGuess}
+                onChange={(e) => {
+                  const re = /^[0-9\b]+$/;
+                  if (e.target.value && re.test(e.target.value)) {
+                    setCurrentGuess(e.target.value);
+                  } else if (!e.target.value) {
+                    setCurrentGuess('');
                   } else {
-                    setHelperText('Some error occured');
-                    setShowPlayAgain(true);
-                    Engine.resetGame();
+                    setCurrentGuess(currentGuess);
                   }
-                }
-              }}
-            >
-              {' '}
-              Guess!
-            </button>
-            <p>{helperText}</p>
+                }}
+              />
+            </div>
+            <div>
+              <button
+                type="button"
+                className="yellow-button"
+                onClick={() => {
+                  if (currentGuess) {
+                    const result = Engine.guessNumber(Number(currentGuess));
+
+                    if (result || result === 0) {
+                      if (result === 2) {
+                        setHelperText('You lost, too bad :D');
+                        setShowPlayAgain(true);
+                        setAttemptsLeft(Engine.attemptsLeft);
+                        Engine.resetGame();
+                      } else {
+                        if (result === 1) {
+                          setHelperText('The guess is too low');
+                        } else if (result === -1) {
+                          setHelperText('The guess is too high');
+                        } else if (result === 0) {
+                          setHelperText('The guess is correct! Good job!');
+                          setShowPlayAgain(true);
+                        }
+                        setAttemptsLeft(Engine.attemptsLeft);
+                      }
+                    } else {
+                      setHelperText('Some error occured');
+                      setShowPlayAgain(true);
+                      Engine.resetGame();
+                    }
+                  }
+                }}
+              >
+                {' '}
+                Guess!
+              </button>
+            </div>
+            <p className="helper-text">{helperText}</p>
             <p>
-              Attempts left: <span>{attemptsLeft}</span>
+              Attempts left: <b>{attemptsLeft}</b>
             </p>
           </div>
         ) : (
