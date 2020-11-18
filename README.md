@@ -2,6 +2,12 @@
 
 **Task:** create an api with basic REST functionality using Node.js and Express
 
+## Tehnologies used:
+
+- This project was created on Ubuntu 20.4
+- Typescript
+- Express
+- Nodemon
 
 ## Project setup
 
