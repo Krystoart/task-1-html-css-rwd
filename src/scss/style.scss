@@ -346,7 +346,30 @@ nav {
 }
 
 .light-purple-section {
+  height: 50vh;
+  background-color: $accent-purple;
+  align-items: center;
   justify-content: center;
+
+  .text-box {
+    text-align: center;
+    padding-bottom: 1rem;
+    width: 30rem;
+
+    * {
+      color: white;
+    }
+
+    .title-text {
+      font-size: 2rem;
+      font-weight: 900;
+      padding-bottom: 2rem;
+    }
+}
+
+  .yellow-button {
+    width: 17rem;
+  }
 }
 
 footer {
