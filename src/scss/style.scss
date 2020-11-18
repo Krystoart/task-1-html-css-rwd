@@ -235,9 +235,65 @@ nav {
 }
 
 .numbering-section {
+  @extend .section-wrap;
+  padding-bottom: 2rem;
+
+  .color-box {
+    height: 10rem;
+    width: 13rem;
       flex: 1;
     }
 
+  .count-row {
+    align-items: center;
+    padding-bottom: 3rem;
+
+    .circle-num {
+      flex: 1;
+      align-items: center;
+
+      .circle {
+        display: flex;
+        width: 5.5rem;
+        height: 5.5rem;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: white;
+        border: 0.7rem solid #00000020;
+
+        p {
+          font-size: 2.5rem;
+        }
+      }
+    }
+
+    .text-box {
+      flex: 4;
+
+      .big-text {
+        font-size: 2rem;
+        font-weight: 900;
+        padding-bottom: 1rem;
+      }
+    }
+  }
+
+  .yellow-color-box {
+    @extend .color-box;
+    background-color: $accent-yellow;
+  }
+
+  .light-purple-color-box {
+    @extend .color-box;
+    background-color: $accent-purple;
+  }
+
+  .dark-purple-color-box {
+    @extend .color-box;
+    background-color: $base-dark;
+  }
+}
 .dark-purple-section {
     }
   }
