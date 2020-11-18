@@ -432,6 +432,20 @@ nav {
   .yellow-button {
     width: 17rem;
   }
+
+  @media (max-width: 768px) {
+    .text-box {
+      width: auto;
+      padding: 0 5vw 3vh 5vw;
+      text-align: left;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .yellow-button {
+      width: 80vw;
+}
+  }
 }
 
 .yellow-color {
