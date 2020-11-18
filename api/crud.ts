@@ -76,9 +76,30 @@ app.delete('/api/data-delete', (req, res) => {
   res.send('Success');
 });
 
-// app.get("/api", (req, res) => {
-//   res.send("Hello World!");
-// });
+interface RequestUpdate {
+  id: number;
+  data: string;
+}
+
+app.post('/api/data-update', (req, res) => {
+  /*
+    Request params:
+    ---------------------
+    JSON object:
+      {
+        id: number;
+        data: string;
+      }
+  */
+
+  const { id } = req.body as RequestUpdate;
+  const { data } = req.body as RequestUpdate;
+
+  if (database.length > id && id >= 0) {
+    database[id] = data;
+  }
+  res.send('Success');
+});
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
