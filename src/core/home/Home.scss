@@ -1,0 +1,421 @@
+@use '../../utils/StyleUtils.scss' as *;
+
+.small-text {
+  font-size: 0.7rem;
+}
+
+.input {
+  border: 1px solid lightgray;
+  height: 2.5rem;
+}
+
+.main-form {
+  height: 80vh;
+  margin-bottom: 4rem;
+
+  .fake-pic {
+    background-color: $base-dark;
+    flex: 3;
+  }
+
+  .form {
+    justify-content: center;
+    align-items: center;
+    flex: 2;
+
+    label {
+      font-size: 0.9rem;
+    }
+
+    .form-box {
+      width: 20rem;
+
+      * {
+        margin-bottom: 0.5rem;
+        border-radius: 0%;
+      }
+    }
+
+    .form-icons {
+      justify-content: space-between;
+
+      * {
+        margin: 0;
+      }
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4rem;
+        height: 2.5rem;
+        background-color: white;
+        border: 0.15rem solid lightgray;
+      }
+
+      @media (max-width: 480px) {
+        div {
+          width: 15vw;
+        }
+      }
+    }
+
+    .text-input {
+      @extend .input;
+      margin: 0.2rem;
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+
+    .submit-button {
+      @extend .input;
+      width: 100%;
+      color: white;
+      background-color: $accent-purple;
+    }
+
+    @media (max-width: 480px) {
+      .form-box {
+        width: auto;
+        margin: 2rem 2rem 1rem 2rem;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .fake-height {
+      height: 30vh;
+    }
+  }
+}
+
+.section-wrap {
+  padding: 0 5rem 5rem 5rem;
+}
+
+.yellow-button {
+  background-color: $accent-yellow;
+  font-size: 1.2rem;
+  font-weight: 900;
+  border-radius: 5rem;
+  border: none;
+  padding: 1rem;
+}
+
+.yellow-button:hover {
+  cursor: pointer;
+}
+
+.green-section {
+  @extend .section-wrap;
+
+  .picture-and-text {
+    height: 50vh;
+
+    .some-text {
+      flex: 2;
+      align-items: center;
+
+      .text-box {
+        width: 15rem;
+        padding-top: 3rem;
+
+        .title-text {
+          font-size: 2rem;
+          font-weight: 900;
+          margin-bottom: 2rem;
+        }
+
+        .small-text-margin {
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+
+    .green-blob {
+      background-color: $accent-lime;
+      flex: 5;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .picture-and-text {
+      flex-direction: column;
+      height: auto;
+    }
+
+    .text-box {
+      width: 60vw;
+      text-align: center;
+      padding-bottom: 3vh;
+    }
+
+    .fake-height {
+      height: 35vh;
+    }
+  }
+}
+
+.big-text-box {
+  padding-bottom: 5rem;
+  justify-content: center;
+
+  .box-align {
+    text-align: center;
+
+    p {
+      font-size: 2.5rem;
+      font-weight: 900;
+    }
+  }
+}
+
+.numbering-section {
+  @extend .section-wrap;
+  padding-bottom: 2rem;
+
+  .color-box {
+    flex: 1;
+  }
+
+  .box {
+    height: 10rem;
+    width: 13rem;
+  }
+
+  .count-row {
+    align-items: center;
+    padding-bottom: 3rem;
+
+    .circle-num {
+      flex: 1;
+      align-items: center;
+
+      .circle {
+        display: flex;
+        width: 5.5rem;
+        height: 5.5rem;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: white;
+        border: 0.7rem solid #00000020;
+
+        p {
+          font-size: 2.5rem;
+        }
+      }
+    }
+
+    .text-box {
+      flex: 4;
+
+      .big-text {
+        font-size: 2rem;
+        font-weight: 900;
+        padding-bottom: 1rem;
+      }
+    }
+  }
+
+  .yellow-color-box {
+    @extend .box;
+    background-color: $accent-yellow;
+  }
+
+  .light-purple-color-box {
+    @extend .box;
+    background-color: $accent-purple;
+  }
+
+  .dark-purple-color-box {
+    @extend .box;
+    background-color: $base-dark;
+  }
+
+  @media (max-width: 768px) {
+    .count-row {
+      flex-direction: column;
+      padding-bottom: 7vh;
+    }
+
+    .circle-num {
+      padding-bottom: 5vh;
+    }
+
+    .text-box {
+      text-align: center;
+    }
+
+    .color-box {
+      padding-bottom: 5vh;
+      justify-self: end;
+    }
+  }
+}
+
+.dark-purple-section {
+  padding-bottom: 3rem;
+  background-color: $base-dark;
+  align-items: center;
+
+  * {
+    color: white;
+  }
+
+  .big-text {
+    align-items: center;
+    padding: 8rem 0 8rem 0;
+
+    p {
+      font-size: 2rem;
+      font-weight: 900;
+    }
+  }
+
+  .cool-item-row {
+    @extend .row;
+
+    .some-item {
+      padding: 2rem;
+
+      .title-text {
+        text-align: center;
+        padding-bottom: 1rem;
+
+        p {
+          font-size: 1.5rem;
+          font-weight: 900;
+        }
+      }
+
+      .list-group {
+        padding: 1rem;
+
+        .list-item {
+          padding-right: 3rem;
+
+          li {
+            color: $accent-lime;
+
+            p {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .cool-item-row {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .big-text {
+      text-align: center;
+    }
+  }
+}
+
+.light-purple-section {
+  height: 50vh;
+  background-color: $accent-purple;
+  align-items: center;
+  justify-content: center;
+
+  .text-box {
+    text-align: center;
+    padding-bottom: 1rem;
+    width: 30rem;
+
+    * {
+      color: white;
+    }
+
+    .title-text {
+      font-size: 2rem;
+      font-weight: 900;
+      padding-bottom: 2rem;
+    }
+  }
+
+  .yellow-button {
+    width: 17rem;
+  }
+
+  @media (max-width: 768px) {
+    .text-box {
+      width: auto;
+      padding: 0 5vw 3vh 5vw;
+      text-align: left;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .yellow-button {
+      width: 80vw;
+    }
+  }
+}
+
+.yellow-color {
+  color: $accent-yellow;
+}
+
+.green-color {
+  color: $accent-lime;
+}
+
+.footer-row {
+  @extend .row;
+  height: 7vh;
+  width: 100%;
+  background-color: $base-dark;
+  justify-content: space-between;
+  align-items: center;
+
+  * {
+    color: lightgray;
+  }
+
+  .fake-pic {
+    width: 7rem;
+    height: 2rem;
+    background-color: lightgray;
+  }
+
+  p {
+    padding: 0 1rem 0 1rem;
+  }
+
+  i {
+    padding: 0 0.5rem 0 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .middle-text {
+      flex-direction: column;
+      text-align: center;
+      padding-top: 2.5vh;
+
+      p {
+        padding-bottom: 1vh;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .main-form {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .main-wrapper {
+    margin-top: 8vh;
+  }
+}
