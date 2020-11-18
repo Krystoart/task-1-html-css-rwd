@@ -2,6 +2,7 @@
 import React, { ReactElement } from 'react';
 
 import './Home.scss';
+import '../../utils/StyleUtils.scss';
 
 export function Home(): ReactElement {
   return (
