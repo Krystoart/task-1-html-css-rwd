@@ -139,6 +139,12 @@ nav {
         background-color: white;
         border: 0.15rem solid lightgray;
       }
+
+      @media (max-width: 480px) {
+        div {
+          width: 15vw;
+    }
+      }
     }
 
     .text-input {
