@@ -143,7 +143,7 @@ nav {
       @media (max-width: 480px) {
         div {
           width: 15vw;
-    }
+        }
       }
     }
 
@@ -229,7 +229,7 @@ nav {
     .picture-and-text {
       flex-direction: column;
       height: auto;
-}
+    }
 
     .text-box {
       width: 60vw;
@@ -338,7 +338,7 @@ nav {
       padding-bottom: 5vh;
       justify-self: end;
     }
-}
+  }
 }
 
 .dark-purple-section {
@@ -363,36 +363,36 @@ nav {
   .cool-item-row {
     @extend .row;
 
-  .some-item {
-    padding: 2rem;
+    .some-item {
+      padding: 2rem;
 
-    .title-text {
-      text-align: center;
-      padding-bottom: 1rem;
+      .title-text {
+        text-align: center;
+        padding-bottom: 1rem;
 
-      p {
-        font-size: 1.5rem;
-        font-weight: 900;
+        p {
+          font-size: 1.5rem;
+          font-weight: 900;
+        }
       }
-    }
 
-    .list-group {
-      padding: 1rem;
+      .list-group {
+        padding: 1rem;
 
-      .list-item {
-        padding-right: 3rem;
+        .list-item {
+          padding-right: 3rem;
 
-        li {
-          color: $accent-lime;
+          li {
+            color: $accent-lime;
 
-          p {
-            color: white;
+            p {
+              color: white;
+            }
           }
         }
       }
     }
   }
-}
 
   @media (max-width: 768px) {
     .cool-item-row {
@@ -444,7 +444,7 @@ nav {
   @media (max-width: 480px) {
     .yellow-button {
       width: 80vw;
-}
+    }
   }
 }
 
@@ -492,7 +492,7 @@ nav {
         padding-bottom: 1vh;
       }
     }
-}
+  }
 }
 
 @media (max-width: 480px) {
@@ -502,7 +502,15 @@ nav {
     height: auto;
   }
 
-  footer {
+  .main-wrapper {
+    margin-top: 8vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-row {
+    flex-direction: column;
+    justify-content: center;
     height: auto;
   }
 }
